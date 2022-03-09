@@ -1,0 +1,21 @@
+<!--pages/index/index.wxml-->
+<view>
+	<view class="main">
+		<view class="anima">
+			<view class="content-inner-image" wx:for="{{ imgList }}">
+				<image src="{{ item.url }}" alt="" />
+			</view>
+		</view>
+		<view class="content">
+			<view>
+				<image src="../../assets/change.png" alt="" />
+			</view>
+			<view>香奈儿的新春祝福，滚滚而来</view>
+			<view>哪一个，会在指尖停驻</view>
+			<view>
+				<!-- <button>碰碰福气</button> -->
+				<view class="button">碰碰福气</view>
+			</view>
+		</view>
+	</view>
+</view>
