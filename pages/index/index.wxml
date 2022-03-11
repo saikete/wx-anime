@@ -1,21 +1,77 @@
 <!--pages/index/index.wxml-->
-<view>
-	<view class="main">
-		<view class="anima">
-			<view class="content-inner-image" wx:for="{{ imgList }}">
-				<image src="{{ item.url }}" alt="" />
+<view id="all-view">
+	<view class="index" style="display:{{ isOut?'none':'block' }}">
+		<view class="main">
+			<view class="anima">
+				<view wx:for="{{ imgList }}" class="content-inner-image {{ item.isOut? imgList[index].liveClass:'' }}">
+					<image src="{{ item.url }}" alt="" />
+				</view>
+			</view>
+			<view class="content">
+				<view class="{{ isBtnOut?'btn-out':'' }}">
+					<image src="../../assets/change.png" alt="" />
+				</view>
+				<view class="{{ isBtnOut?'btn-out':'' }}">香奈儿的新春祝福，滚滚而来</view>
+				<view class="{{ isBtnOut?'btn-out':'' }}">哪一个，会在指尖停驻</view>
+				<view class="{{ isBtnOut?'btn-out':'' }}">
+					<view class="button" bindtap="btnClick">碰碰福气</view>
+				</view>
 			</view>
 		</view>
-		<view class="content">
-			<view>
-				<image src="../../assets/change.png" alt="" />
-			</view>
-			<view>香奈儿的新春祝福，滚滚而来</view>
-			<view>哪一个，会在指尖停驻</view>
-			<view>
-				<!-- <button>碰碰福气</button> -->
-				<view class="button">碰碰福气</view>
+	</view>
+	<view id="ani-luck" style="display:{{ isOut?'flex':'none' }}">
+		<view />
+		<view class="header">
+			<view class="content">
+				<image src="../../assets/change.png" mode="aspectFit" />
 			</view>
 		</view>
+		<view class="content-center {{ isOut2 ? 'all-out' : '' }}">
+			<view style="display:{{ isReady?'none':'block' }}"></view>
+			<view style="display:{{ isReady?'block':'none' }}" class="{{ isOut2? 'all-out' : '' }}">
+				<video
+					src="https://www.okokya.com/demo/ANIMATION.mp4"
+					autoplay="{{ true }}"
+					loop="{{ true }}"
+					muted="{{ true }}"
+					controls="{{ false }}"
+					bindloadedmetadata="onVideoLoaded"
+				></video>
+			</view>
+			<view class="{{ isOut2? 'ani-show' : 'all-out' }}"></view>
+		</view>
+		<view class="content-center {{ isOut2 ? 'ani-show' : 'all-out' }}">
+			<!-- <video src="../../assets/ANIMATION.mp4" autoplay="autoplay" loop></video> -->
+			<image src="../../assets/ANIMATION/animation-4.jpg" mode="aspectFit" alt="" />
+		</view>
+		<view />
+		<view class="bottom center {{ isOut2 ? 'text-dis' : '' }}">点击按钮，让祝福在指尖停驻</view>
+		<view class="{{ isOut2 ? 'text-dis' : '' }}" />
+		<view class="center">
+			<view class="button {{ isOut2 ? 'text-dis' : '' }}" bindtap="btnFunc">锁定我的新年运</view>
+		</view>
+		<!-- <view class="bottom {{ isOut2 ? 'text-dis' : '' }}">
+			<view>点击按钮，让祝福在指尖停驻</view>
+			<view>
+				<view class="button" bindtap="btnFunc">锁定我的新年运</view>
+			</view>
+		</view> -->
+		<view class="{{ isOut2 ? 'text-dis' : '' }}" />
+		<view class="center {{ isOut2 ? 'text-top' : '' }} {{ isOut2 ? '' : 'all-out' }}">
+			<view>恭喜你成功锁定香奈儿专属祝福</view>
+		</view>
+		<view />
+		<view class="center {{ isOut2 ? 'text-down' : '' }} {{ isOut2 ? '' : 'all-out' }}">
+			<view class="button" bindtap="watchFunc">查看我的新年祝福</view>
+		</view>
+		<!-- <view class="bottom {{ isOut2 ? '' : 'all-out' }}">
+			<view class="{{ isOut2 ? 'text-top' : '' }}">
+				<view>恭喜你成功锁定香奈儿专属祝福</view>
+			</view>
+			<view class="{{ isOut2 ? 'text-down' : '' }}">
+				<view class="button" bindtap="watchFunc">查看祝福</view>
+			</view>
+		</view> -->
+		<view />
 	</view>
 </view>

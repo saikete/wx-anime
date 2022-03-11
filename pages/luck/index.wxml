@@ -1,2 +1,43 @@
 <!--pages/luck/index.wxml-->
-<text>pages/luck/index.wxml</text>
+<view>
+	<view id="ani-luck">
+		<view class="header">
+			<view class="content">
+				<image src="../../assets/change.png" alt="" />
+			</view>
+		</view>
+		<view class="content-center {{ isOut ? 'all-out' : '' }}">
+			<view style="display:{{ isReady?'none':'block' }}"></view>
+			<view style="display:{{ isReady?'block':'none' }}" class="{{ isOut? 'all-out' : '' }}">
+				<video
+					src="https://www.okokya.com/demo/ANIMATION.mp4"
+					autoplay="{{ true }}"
+					loop="{{ true }}"
+					muted="{{ true }}"
+					controls="{{ false }}"
+					bindloadedmetadata="onVideoLoaded"
+				></video>
+			</view>
+			<view class="{{ isOut? 'ani-show' : 'all-out' }}"></view>
+		</view>
+		<view class="content-center {{ isOut ? 'ani-show' : 'all-out' }}">
+			<!-- <video src="../../assets/ANIMATION.mp4" autoplay="autoplay" loop></video> -->
+			<image src="../../assets/ANIMATION/animation-4.jpg" alt="" />
+		</view>
+		<view class="bottom {{ isOut ? 'text-dis' : '' }}">
+			<view>点击按钮，让祝福在指尖停驻</view>
+			<view>
+				<view class="button" bindtap="btnFunc">锁定我的新年运</view>
+			</view>
+		</view>
+		<view class="bottom {{ isOut ? '' : 'all-out' }}">
+			<view class="{{ isOut ? 'text-top' : '' }}">
+				<view>恭喜你成功锁定</view>
+				<view>这份香奈儿专属祝福</view>
+			</view>
+			<view class="{{ isOut ? 'text-down' : '' }}">
+				<view class="button" bindtap="watchFunc">查看祝福</view>
+			</view>
+		</view>
+	</view>
+</view>

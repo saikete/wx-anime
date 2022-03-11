@@ -5,16 +5,85 @@ Page({
 	 */
 	data: {
 		imgList: [
-			{url: '../../assets/ELEMENTS/camilia.png'},
-			{url: '../../assets/ELEMENTS/laten.png'},
-			{url: '../../assets/ELEMENTS/flower2.png'},
-			{url: '../../assets/ELEMENTS/n5.png'},
-			// {url: '../../assets/ELEMENTS/camilia.png'},
-			// {url: '../../assets/ELEMENTS/flower1.png'},
-			// {url: '../../assets/ELEMENTS/lip.png'},
+			{
+				url: '../../assets/ELEMENTS/camilia.png',
+				isOut: false,
+				liveClass: 'first-leave',
+			},
+			{
+				url: '../../assets/ELEMENTS/laten.png',
+				isOut: false,
+				liveClass: 'second-leave',
+			},
+			{
+				url: '../../assets/ELEMENTS/flower2.png',
+				isOut: false,
+				liveClass: 'third-leave',
+			},
+			{
+				url: '../../assets/ELEMENTS/n5.png',
+				isOut: false,
+				liveClass: 'fourth-leave',
+			},
+			{
+				url: '../../assets/ELEMENTS/camilia.png',
+				isOut: false,
+				liveClass: 'fifth-leave',
+			},
+			{
+				url: '../../assets/ELEMENTS/flower1.png',
+				isOut: false,
+				liveClass: 'sixth-leave',
+			},
+			{
+				url: '../../assets/ELEMENTS/lip.png',
+				isOut: false,
+				liveClass: 'seventh-leave',
+			},
 		],
+		isOut: false,
+		isBtnOut: false,
+		isReady: false,
+		isOut2: false,
 	},
 
+	onVideoLoaded(e) {
+		console.log(e)
+		this.setData({
+			isReady: true,
+		})
+	},
+
+	btnFunc() {
+		console.log(123)
+		this.setData({
+			isOut2: true,
+		})
+	},
+
+	btnClick(e) {
+		console.log(e)
+		let list = this.data.imgList
+		list.forEach((v) => {
+			v.isOut = true
+		})
+		this.setData({
+			imgList: list,
+			isBtnOut: true,
+		})
+
+		// setTimeout(() => {
+		// 	wx.navigateTo({
+		// 		url: '../../pages/luck/index',
+		// 	})
+		// }, 800)
+
+		setTimeout(() => {
+			this.setData({
+				isOut: true,
+			})
+		}, 1000)
+	},
 	/**
 	 * 生命周期函数--监听页面加载
 	 */

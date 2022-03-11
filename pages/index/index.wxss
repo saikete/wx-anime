@@ -19,6 +19,22 @@ image {
   transform: translate(0, 0);
   overflow: hidden;
 }
+video {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+#all-view .index {
+  width: 100%;
+  height: 100%;
+}
+#all-view .index .anima {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform: translate(0, 0);
+  overflow: hidden;
+}
 @keyframes all {
   0% {
     opacity: 0;
@@ -35,7 +51,7 @@ image {
     opacity: 0;
   }
 }
-.button {
+#all-view .index .button {
   width: 288rpx;
   height: 80rpx;
   background: #000000;
@@ -48,53 +64,64 @@ image {
   text-align: center;
   line-height: 80rpx;
 }
-.content-inner-image {
+#all-view .index .content-inner-image {
   position: absolute;
 }
-.content-inner-image:nth-child(1) {
+#all-view .index .content-inner-image:nth-child(1) {
   transform: translate(0, 0) rotate(30deg);
   width: 256rpx;
   height: 242rpx;
   animation: first 1s ease-in-out 0.2s 1 normal both running;
 }
-.content-inner-image:nth-child(2) {
+#all-view .index .content-inner-image:nth-child(2) {
   width: 428rpx;
   height: 380rpx;
   transform: translate(629rpx, 0rpx) rotate(-17deg);
   animation: second 1s ease-in-out 0.2s 1 normal both running;
 }
-.content-inner-image:nth-child(3) {
+#all-view .index .content-inner-image:nth-child(3) {
   width: 360rpx;
   height: 280rpx;
   transform: translate(-305rpx, 172rpx) rotate(20deg);
   animation: third 1s ease-in-out 0.2s 1 normal both running;
 }
-.content-inner-image:nth-child(4) {
-  transform: translate(-296rpx, 1100rpx) rotate(-20deg);
+#all-view .index .content-inner-image:nth-child(4) {
   width: 345rpx;
   height: 491rpx;
+  bottom: -235rpx;
+  left: -296rpx;
+  transform: translate(0, 0) rotate(-20deg);
   animation: fourth 1s ease-in-out 0.2s 1 normal both running;
 }
-.content-inner-image:nth-child(5) {
-  transform: translate(2.93rem, 13.18rem) rotate(40deg);
-  width: 2.23rem;
+#all-view .index .content-inner-image:nth-child(5) {
+  transform: translate(0, 0) rotate(40deg);
+  width: 223rpx;
+  height: 209rpx;
+  left: 293rpx;
+  bottom: -195rpx;
   animation: fifth 1s ease-in-out 0.2s 1 normal both running;
 }
-.content-inner-image:nth-child(6) {
-  transform: translate(5.04rem, 12.36rem) rotate(30deg);
-  width: 3rem;
+#all-view .index .content-inner-image:nth-child(6) {
+  transform: translate(0, 0) rotate(30deg);
+  width: 300rpx;
+  height: 498rpx;
+  right: 16rpx;
+  bottom: -410rpx;
   animation: sixth 1s ease-in-out 0s 1 normal both running;
 }
-.content-inner-image:nth-child(7) {
-  transform: translate(7.11rem, 9.42rem) rotate(28deg);
-  width: 3.45rem;
+#all-view .index .content-inner-image:nth-child(7) {
+  transform: translate(0, 0) rotate(28deg);
+  width: 345rpx;
+  height: 491rpx;
+  bottom: 0;
+  right: -255rpx;
   animation: seventh 1s ease-in-out 0s 1 normal both running;
 }
-.main {
+#all-view .index .main {
   width: 100%;
   height: 100%;
 }
-.main .content {
+#all-view .index .main .content {
   width: 100%;
   height: 100%;
   display: flex;
@@ -104,48 +131,48 @@ image {
   padding-top: 50rpx;
   box-sizing: border-box;
 }
-.main .content .btn-out {
+#all-view .index .main .content .btn-out {
   animation: btn-out 0.8s ease-in-out 0s 1 normal both running !important;
 }
-.main .content > view:nth-child(1) {
+#all-view .index .main .content > view:nth-child(1) {
   margin-top: 0.5rem;
   animation: all 1s ease-in-out 0.2s 1 normal both running;
 }
-.main .content > view:nth-child(1) image {
+#all-view .index .main .content > view:nth-child(1) image {
   width: 386rpx;
   height: 60rpx;
 }
-.main .content > view:nth-child(2) {
+#all-view .index .main .content > view:nth-child(2) {
   margin-top: 52rpx;
   font-size: 36rpx;
   color: #d4a672;
   animation: all 0.8s ease-in-out 1s 1 normal both running;
 }
-.main .content > view:nth-child(3) {
+#all-view .index .main .content > view:nth-child(3) {
   font-size: 36rpx;
   color: #d4a672;
   margin-top: 0.1rem;
   animation: all 0.8s ease-in-out 1s 1 normal both running;
 }
-.main .first-leave {
+#all-view .index .main .first-leave {
   animation: first-leave 1s ease-in-out 0s 1 normal both running;
 }
-.main .second-leave {
+#all-view .index .main .second-leave {
   animation: second-leave 1s ease-in-out 0s 1 normal both running;
 }
-.main .third-leave {
+#all-view .index .main .third-leave {
   animation: third-leave 1s ease-in-out 0s 1 normal both running;
 }
-.main .fourth-leave {
+#all-view .index .main .fourth-leave {
   animation: fourth-leave 1s ease-in-out 0s 1 normal both running;
 }
-.main .fifth-leave {
+#all-view .index .main .fifth-leave {
   animation: fifth-leave 1s ease-in-out 0s 1 normal both running;
 }
-.main .sixth-leave {
+#all-view .index .main .sixth-leave {
   animation: sixth-leave 1s ease-in-out 0s 1 normal both running;
 }
-.main .seventh-leave {
+#all-view .index .main .seventh-leave {
   animation: seventh-leave 1s ease-in-out 0s 1 normal both running;
 }
 @keyframes first {
@@ -211,80 +238,214 @@ image {
 @keyframes fourth {
   0% {
     opacity: 0;
-    transform: translate(-2.96rem, 10.99rem) rotate(-20deg);
+    transform: translate(0, 0) rotate(-20deg);
   }
   100% {
     opacity: 1;
-    transform: translate(-0.83rem, 9.42rem) rotate(0deg);
+    transform: translate(213rpx, -157rpx) rotate(0deg);
   }
 }
 @keyframes fourth-leave {
   0% {
     opacity: 1;
-    transform: translate(-0.83rem, 9.42rem) rotate(0deg);
+    transform: translate(213rpx, -157rpx) rotate(0deg);
   }
   100% {
     opacity: 0;
-    transform: translate(-2.96rem, 10.99rem) rotate(-20deg);
+    transform: translate(0, 0) rotate(-20deg);
   }
 }
 @keyframes fifth {
   0% {
     opacity: 0;
-    transform: translate(2.93rem, 13.18rem) rotate(40deg);
+    transform: translate(0, 0) rotate(40deg);
   }
   100% {
     opacity: 1;
-    transform: translate(2.93rem, 12.03rem) rotate(0deg);
+    transform: translate(0, -80rpx) rotate(0deg);
   }
 }
 @keyframes fifth-leave {
   0% {
     opacity: 1;
-    transform: translate(2.93rem, 12.03rem) rotate(0deg);
+    transform: translate(0, -80rpx) rotate(0deg);
   }
   100% {
     opacity: 0;
-    transform: translate(2.93rem, 13.18rem) rotate(40deg);
+    transform: translate(0, 0) rotate(40deg);
   }
 }
 @keyframes sixth {
   0% {
     opacity: 0;
-    transform: translate(5.04rem, 12.36rem) rotate(30deg);
+    transform: translate(0, 0) rotate(30deg);
   }
   100% {
     opacity: 1;
-    transform: translate(4.84rem, 10.84rem) rotate(0deg);
+    transform: translate(20rpx, -171rpx) rotate(0deg);
   }
 }
 @keyframes sixth-leave {
   0% {
     opacity: 1;
-    transform: translate(4.84rem, 10.84rem) rotate(0deg);
+    transform: translate(20rpx, -171rpx) rotate(0deg);
   }
   100% {
     opacity: 0;
-    transform: translate(5.04rem, 12.36rem) rotate(30deg);
+    transform: translate(0, 0) rotate(30deg);
   }
 }
 @keyframes seventh {
   0% {
     opacity: 0;
-    transform: translate(7.11rem, 9.42rem) rotate(28deg);
+    transform: translate(0, 0) rotate(28deg);
   }
   100% {
     opacity: 1;
-    transform: translate(5.63rem, 9.65rem) rotate(0deg);
+    transform: translate(-80rpx, 0) rotate(0deg);
   }
 }
 @keyframes seventh-leave {
   0% {
     opacity: 1;
-    transform: translate(5.63rem, 9.65rem) rotate(0deg);
+    transform: translate(-80rpx, 0) rotate(0deg);
   }
   100% {
     opacity: 0;
-    transform: translate(7.11rem, 9.42rem) rotate(28deg);
+    transform: translate(0, 0) rotate(28deg);
   }
+}
+#all-view .index-leave {
+  animation: index-leave 1s ease-in-out 0s 1 normal both running;
+}
+@keyframes index-leave {
+  0% {
+    display: block;
+  }
+  100% {
+    display: none;
+  }
+}
+#all-view #ani-luck {
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+}
+#all-view #ani-luck .all-out {
+  display: none;
+  animation: all-out 1s ease-in-out 0s 1 normal both running !important;
+}
+#all-view #ani-luck .ani-show {
+  flex: 270;
+  animation: all-in 0.88s ease-in-out 0s 1 normal both running !important;
+}
+#all-view #ani-luck .ani-show > image {
+  width: 100%;
+}
+#all-view #ani-luck .text-dis {
+  display: none;
+  animation: all-out 0.4s ease-in-out 0s 1 normal both running !important;
+}
+#all-view #ani-luck .text-top {
+  animation: all-out 0.8s ease-in-out 0.62s 1 normal both running !important;
+}
+#all-view #ani-luck .text-down {
+  animation: all-out 0.8s ease-in-out 0.7s 1 normal both running !important;
+}
+#all-view #ani-luck > view:nth-child(1) {
+  flex: 42;
+  width: 100%;
+}
+#all-view #ani-luck > view:nth-child(5) {
+  flex: 42;
+}
+#all-view #ani-luck > view:nth-child(7) {
+  flex: 35;
+}
+#all-view #ani-luck > view:nth-child(9) {
+  flex: 55;
+}
+#all-view #ani-luck > view:nth-child(10) {
+  flex: 35;
+}
+#all-view #ani-luck > view:nth-child(12) {
+  flex: 55;
+}
+#all-view .header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: all 0.32s ease-in-out 0s 1 normal both running;
+  flex: 107;
+}
+#all-view .header .content image {
+  width: 386rpx;
+  height: 60rpx;
+}
+@keyframes all {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes all-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes all-out {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#all-view .content-center {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 600rpx;
+}
+#all-view .content-center > view {
+  width: 100%;
+  height: 100%;
+  transform: scale(0.8);
+  opacity: 0;
+  animation: all-in 1s ease-in-out 0.24s 1 normal both running;
+  background-color: #fff;
+}
+#all-view .center {
+  text-align: center;
+  color: #d4a672;
+}
+#all-view .center > view {
+  text-align: center;
+}
+#all-view .bottom {
+  animation: all 0.32s ease-in-out 0s 1 normal both running;
+}
+#all-view .bottom > view {
+  text-align: center;
+  color: #d4a672;
+}
+#all-view .dis {
+  display: none;
+}
+#all-view .button {
+  padding: 10rpx 20rpx;
+  background: #000000;
+  color: #fff;
+  outline: none;
+  border: none;
+  font-size: 14px;
+  display: inline-block;
 }
